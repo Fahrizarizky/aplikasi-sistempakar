@@ -10,6 +10,7 @@ use App\Models\Gejala;
 use App\Models\Kondisi;
 use App\Models\Solusi;
 use App\Models\Tingkatstres;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -370,6 +371,16 @@ class DatabaseSeeder extends Seeder
         'gejala_id' => 33,
         'tingkatstres_id' => 1,
         'bobot' => 0.0
+       ]);
+
+       User::create([
+        'nama' => 'rizky',
+        'email' => 'fahrizarizky@gmail.com',
+        'nama_sekolah' => '-',
+        'kelas' => '-',
+        'jurusan' => '-',
+        'password' => 'password',
+        'is_admin' => true
        ]);
     }
 }
