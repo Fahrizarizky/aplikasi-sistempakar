@@ -70,11 +70,11 @@ class dashboardController extends Controller
         ]);
 
         Gejala::create($validasi);
-        return redirect('dashboard/gejalapage');
+        return redirect('dashboard/Gejalapage');
     }
     public function editgejala($id) {
         $gejala = Gejala::find($id);
-        return view('dashboard.editgejalapage', [
+        return view('dashboard.Editgejalapage', [
             'gejala' => $gejala
         ]);
     }
@@ -86,11 +86,11 @@ class dashboardController extends Controller
             'deskripsi' => $request->deskripsi
         ]);
 
-        return redirect('/dashboard/gejalapage');
+        return redirect('/dashboard/Gejalapage');
     }
     public function deletegejala($id) {
         Gejala::find($id)->delete();
-        return redirect('/dashboard/gejalapage');
+        return redirect('/dashboard/Gejalapage');
     }
 
 
@@ -111,7 +111,7 @@ class dashboardController extends Controller
         ]);
 
         Tingkatstres::create($validasi);
-        return redirect('/dashboard/tingkatstrespage');
+        return redirect('/dashboard/Tingkatstrespage');
     }
     public function edittingkatstres($id) {
         $tingkat = Tingkatstres::find($id);
@@ -126,11 +126,11 @@ class dashboardController extends Controller
         $tingkat->solusi_stres = $request->solusi_stres;
         $tingkat->update();
 
-        return redirect('/dashboard/tingkatstrespage');
+        return redirect('/dashboard/Tingkatstrespage');
     }
     public function hapustingkatstres($id) {
         Tingkatstres::find($id)->delete();
-        return redirect('/dashboard/tingkatstrespage');
+        return redirect('/dashboard/Tingkatstrespage');
     }
 
     
@@ -151,7 +151,7 @@ class dashboardController extends Controller
         ]);
 
         Aturan::create($validasi);
-        return redirect('/dashboard/aturanpage');
+        return redirect('/dashboard/Aturanpage');
     }
     public function editaturan($id) {
         $aturan = Aturan::find($id);
@@ -172,11 +172,11 @@ class dashboardController extends Controller
         
         $oldaturan->update();
 
-        return redirect('/dashboard/aturanpage');
+        return redirect('/dashboard/Aturanpage');
     }
     public function hapusaturan($id) {
         Aturan::find($id)->delete();
-        return redirect('/dashboard/aturanpage');
+        return redirect('/dashboard/Aturanpage');
     }
 
     //daftar akun controller
